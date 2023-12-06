@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  img {
+    @apply block object-cover;
+  }
+
+  main {
+    @apply overflow-hidden text-white bg-base font-primary;
+  }
+
+  section {
+    @apply relative;
+  }
+}
+
+@layer components {
+  .container {
+    @apply relative max-w-xs lg:max-w-container-lg xl:max-w-container-xl;
+  }
+
+  .SectionTitle {
+    @apply text-3xl font-bold leading-none text-center lg:text-[4.1875rem] lg:text-left;
+  }
+
+  .Button {
+    @apply flex justify-center p-3 text-xs font-bold text-white transition-none transition-colors rounded-full cursor-pointer bg-base lg:text-base lg:text-white xl:text-[1.375rem];
+
+    &:focus,
+    &:hover {
+      @apply bg-base-3;
+    }
+  }
+
+  .Link {
+    @apply transition-colors;
+    &:hover,
+    &:focus {
+      @apply text-accent;
+    }
+  }
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+.animate-bounce {
+  animation: bounce 2500ms infinite alternate ease-in-out;
+}
+
+.animate-cards {
+  animation: cards 6000ms infinite ease-out;
+}
+
+.animate-replace-1 {
+  animation: replace-1 10s 2s infinite ease-out;
+}
+.animate-replace-2 {
+  animation: replace-2 10s 2s infinite ease-out;
+}
+
+.animate-delay {
+  animation-delay: 500ms;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(25px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes cards {
+  0% {
+    transform: rotate(30deg) translate(-10px, -16px);
+  }
+  25% {
+    transform: rotate(0deg) translate(-45px, -38px);
+  }
+  50% {
+    transform: rotate(0deg) translate(-45px, -38px);
+  }
+
+  75% {
+    transform: rotate(30deg) translate(-10px, -16px);
+  }
+
+  100% {
+    transform: rotate(30deg) translate(-10px, -16px);
+  }
+}
+
+@keyframes replace-1 {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  55% {
+    opacity: 1;
+  }
+}
+
+@keyframes replace-2 {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  55% {
+    opacity: 0;
+  }
+}

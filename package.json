@@ -1,0 +1,30 @@
+{
+  "name": "zimnie-zabavi",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "assets": "gulp"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "gulp": "^4.0.2",
+    "gulp-fonter": "^0.3.0",
+    "gulp-imagemin": "^9.0.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-ttf2woff2": "^4.0.1",
+    "gulp-webp": "^5.0.0",
+    "postcss": "^8.4.31",
+    "postcss-preset-env": "^9.3.0",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "swiper": "^11.0.5",
+    "vite-plugin-handlebars": "^1.6.0"
+  }
+}
